@@ -1,3 +1,10 @@
+import { Footer, Header } from "@/components";
+
 export const Component = () => {
-  return <div>Component</div>;
+  return (
+    <article>
+      <Header />
+      <Footer />
+    </article>
+  );
 };
