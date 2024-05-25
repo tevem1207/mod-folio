@@ -1,22 +1,9 @@
-import { Features } from "./Features";
-import type { FeaturesProps } from "./types";
+import { lazy } from "react";
 
-type BlockProps = {
-  blocks: FeaturesProps[];
-};
+import type { BlockProps } from "./types";
 
-export const Block = ({ blocks }: BlockProps) => {
-  return (
-    <div>
-      {blocks.map(({ type, data }) => {
-        switch (type) {
-          case "features":
-            return <Features {...{ type, data }} />;
+const Features = lazy(() => import("./Features"));
 
-          default:
-            break;
-        }
-      })}
-    </div>
-  );
+export const Block = ({ type, data }: BlockProps) => {
+  return <div>{type === "features" ? <Features {...{ type, data }} /> : <></>}</div>;
 };
