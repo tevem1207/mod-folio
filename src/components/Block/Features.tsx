@@ -3,14 +3,15 @@ import type { FeaturesProps } from "./types";
 const Features = ({ data }: FeaturesProps) => {
   const Feature = ({ title, content }: { title: string; content: string }) => {
     return (
-      <div>
-        <h3>{title}</h3>
+      <div className="flex flex-col gap-2">
+        <h3 className="text-2xl	font-bold">{title}</h3>
         <p>{content}</p>
       </div>
     );
   };
+
   return (
-    <div>
+    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-12 md:gap-16">
       {data.map((feature) => (
         <Feature {...feature} />
       ))}
