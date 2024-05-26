@@ -15,7 +15,7 @@ export const Component = () => {
   }, []);
 
   return (
-    <article className="max-w-screen-lg mx-auto">
+    <article>
       <Header />
       <Blocks blocksData={blocksData} />
       <Footer />
