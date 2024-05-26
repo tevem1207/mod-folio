@@ -13,8 +13,9 @@ export const Component = () => {
       .then((res) => res.json())
       .then((data: BlockProps[]) => setBlocksData(data));
   }, []);
+
   return (
-    <article>
+    <article className="max-w-screen-lg mx-auto">
       <Header />
       <Blocks blocksData={blocksData} />
       <Footer />

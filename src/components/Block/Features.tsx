@@ -11,7 +11,7 @@ const Features = ({ data }: FeaturesProps) => {
   };
 
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-12 md:gap-16">
+    <div className="grid sm:grid-cols-1 md:grid-cols-2 sm:gap-12 md:gap-16">
       {data.map((feature) => (
         <Feature {...feature} />
       ))}

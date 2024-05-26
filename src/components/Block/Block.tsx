@@ -10,7 +10,7 @@ export const Block = ({ type, data }: BlockProps) => {
 
 export const Blocks = ({ blocksData }: { blocksData?: BlockProps[] }) => {
   return (
-    <div className="sm:px-5 md:px-8 lg:px-10 py-10 flex flex-col gap-5">
+    <div className="sm:px-5 md:px-8 py-10 flex flex-col gap-5 min-h-[calc(100dvh-13.5rem)]">
       {blocksData?.map((blockdata) => <Block {...blockdata} />)}
     </div>
   );
