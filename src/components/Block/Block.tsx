@@ -13,8 +13,8 @@ export const Block = ({ type, data }: BlockProps) => {
 export const Blocks = ({ blocksData }: { blocksData?: BlockProps[] }) => {
   return (
     <div className="relative">
-      <div className="sticky top-0 z-1 py-4 sm:px-5 md:px-8 bg-white/90 shadow-sm backdrop-blur supports-backdrop-blur:bg-white/95">
-        <div className="max-w-screen-lg mx-auto">
+      <div className="sticky top-0 z-1 py-4 bg-white/90 shadow-sm backdrop-blur">
+        <div className="max-w-screen-lg sm:px-5 md:px-8 mx-auto">
           <Menu></Menu>
         </div>
       </div>

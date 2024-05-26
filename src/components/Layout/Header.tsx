@@ -4,12 +4,12 @@ import GithubIcon from "@/assets/github-logo.svg?react";
 
 export const Header = () => {
   return (
-    <header className="header-background sm:px-5 md:px-8 bg-slate-100">
-      <div className="max-w-screen-lg w-full mx-auto">
+    <header className="header-background bg-slate-100">
+      <div className="max-w-screen-lg sm:px-5 md:px-8 w-full mx-auto">
         <div className="text-xl font-bold py-4">ModFolio</div>
-        <div className="pt-4 pb-8">
-          <h2 className="text-3xl font-bold py-4">This is My Portfolio</h2>
-          <p className="opacity-90 py-4">
+        <div className="flex flex-col gap-6 pt-4 pb-8">
+          <h2 className="text-3xl font-bold">This is My Portfolio</h2>
+          <p className="opacity-90">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.
           </p>
