@@ -1,21 +1,14 @@
-import { EnvelopeIcon, LinkIcon } from "@heroicons/react/24/outline";
+import { LinkButton } from "@/components";
+import { Portfolio } from "@/types";
 
-import GithubIcon from "@/assets/github-logo.svg?react";
-
-export const Footer = () => {
+export const Footer = ({ links }: Portfolio) => {
   return (
     <footer className="flex flex-col md:flex-row gap-6 md:justify-between w-full max-w-screen-lg mx-auto items-center sm:px-5 md:px-8 pt-10 pb-20">
       <div className="text-sm opacity-80">© 2024 mod_folio. All rights reserved</div>
-      <div className="h-6 flex gap-4">
-        <button className="size-6 rounded-full p-1 bg-slate-200">
-          <EnvelopeIcon className="size-4" />
-        </button>
-        <button className="size-6 rounded-full p-1 bg-slate-200">
-          <GithubIcon className="size-4" />
-        </button>
-        <button className="size-6 rounded-full p-1 bg-slate-200">
-          <LinkIcon className="size-4" />
-        </button>
+      <div className="h-8 flex gap-4">
+        {links?.map(({ icon, url }) => (
+          <LinkButton key={`link-button-${icon}`} icon={icon} url={url} />
+        ))}
       </div>
     </footer>
   );
