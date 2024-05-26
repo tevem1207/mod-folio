@@ -15,9 +15,9 @@ export const Component = () => {
 
   return (
     <article>
-      <Header />
-      <Blocks blocks={portfolioData?.blocks} />
-      <Footer />
+      <Header {...portfolioData} />
+      <Blocks {...portfolioData} />
+      <Footer {...portfolioData} />
     </article>
   );
 };
