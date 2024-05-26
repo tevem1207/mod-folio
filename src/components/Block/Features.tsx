@@ -1,4 +1,4 @@
-import type { FeaturesProps } from "./types";
+import type { FeaturesProps } from "@/types";
 
 const Features = ({ data }: FeaturesProps) => {
   const Feature = ({ title, content }: { title: string; content: string }) => {

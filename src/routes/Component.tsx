@@ -2,22 +2,21 @@ import { useEffect, useState } from "react";
 
 import { Footer, Header } from "@/components";
 import { Blocks } from "@/components";
-
-import { BlockProps } from "@/components/Block/types";
+import type { Portfolio } from "@/types";
 
 export const Component = () => {
-  const [blocksData, setBlocksData] = useState<BlockProps[]>();
+  const [portfolioData, setPortfolioData] = useState<Portfolio>();
 
   useEffect(() => {
-    fetch("/block-data.json")
+    fetch("/data.json")
       .then((res) => res.json())
-      .then((data: BlockProps[]) => setBlocksData(data));
+      .then((portfolioData: Portfolio) => setPortfolioData(portfolioData));
   }, []);
 
   return (
     <article>
       <Header />
-      <Blocks blocksData={blocksData} />
+      <Blocks blocks={portfolioData?.blocks} />
       <Footer />
     </article>
   );
