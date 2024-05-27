@@ -8,7 +8,7 @@ export const Component = () => {
   const [portfolioData, setPortfolioData] = useState<Portfolio>();
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/mod-folio/data.json")
       .then((res) => res.json())
       .then((portfolioData: Portfolio) => setPortfolioData(portfolioData));
   }, []);
