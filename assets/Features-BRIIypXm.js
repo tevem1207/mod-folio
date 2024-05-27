@@ -1,1 +1,0 @@
-import{j as s}from"./index-Cg-3QmY1.js";const d=({data:r})=>{const a=({title:e,content:l})=>s.jsxs("div",{className:"flex flex-col gap-2",children:[s.jsx("h3",{className:"text-2xl	font-bold",children:e}),s.jsx("p",{children:l})]});return s.jsx("div",{className:"grid sm:grid-cols-1 md:grid-cols-2 sm:gap-12 md:gap-16",children:r.map(e=>s.jsx(a,{...e}))})};export{d as default};
