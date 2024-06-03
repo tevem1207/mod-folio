@@ -21,6 +21,7 @@
   "blocks": [
     {
       "type": "features",
+      "title": "Features",
       "data": [
         {
           "title": "Flexibility",
@@ -66,15 +67,37 @@
     },
     {
       "type": "clouds",
+      "title": "Clouds",
       "data": [
         {
+          "bgColor": "#e5e5e5",
           "img": "/mod-folio/assets/figma-svgrepo-com.svg",
-          "title": "Flexibility",
+          "title": "Figma",
           "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         },
         {
           "img": "/mod-folio/assets/js-svgrepo-com.svg",
-          "title": "User friendly",
+          "title": "JavaScript",
+          "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "img": "/mod-folio/assets/java-svgrepo-com.svg",
+          "title": "Java",
+          "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "img": "/mod-folio/assets/python-svgrepo-com.svg",
+          "title": "Python",
+          "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "img": "/mod-folio/assets/react-svgrepo-com.svg",
+          "title": "React",
+          "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "img": "/mod-folio/assets/vue-svgrepo-com.svg",
+          "title": "Vue",
           "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       ]
