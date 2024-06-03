@@ -5,9 +5,18 @@
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   "links": [
-    { "icon": "link", "url": "https://github.com/" },
-    { "icon": "github", "url": "https://github.com/" },
-    { "icon": "message", "url": "https://github.com/" }
+    {
+      "icon": "link",
+      "url": "https://github.com/"
+    },
+    {
+      "icon": "github",
+      "url": "https://github.com/"
+    },
+    {
+      "icon": "message",
+      "url": "https://github.com/"
+    }
   ],
   "blocks": [
     {
@@ -52,6 +61,21 @@
         {
           "title": "Well organised",
           "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+      ]
+    },
+    {
+      "type": "clouds",
+      "data": [
+        {
+          "img": "/mod-folio/assets/figma-svgrepo-com.svg",
+          "title": "Flexibility",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "img": "/mod-folio/assets/js-svgrepo-com.svg",
+          "title": "User friendly",
+          "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       ]
     }

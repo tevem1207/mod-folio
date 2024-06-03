@@ -1,4 +1,4 @@
-import type { FeaturesProps } from "@/types";
+import type { FeaturesProps } from "@/module-types";
 
 const Features = ({ data }: FeaturesProps) => {
   const Feature = ({ title, content }: { title: string; content: string }) => {
@@ -12,8 +12,8 @@ const Features = ({ data }: FeaturesProps) => {
 
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 sm:gap-12 md:gap-16">
-      {data.map((feature) => (
-        <Feature {...feature} />
+      {data.map((feature, index) => (
+        <Feature key={`feature-block-${index}`} {...feature} />
       ))}
     </div>
   );

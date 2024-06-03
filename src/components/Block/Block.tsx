@@ -1,13 +1,23 @@
 import { lazy } from "react";
 
+import { Menu } from "@/components";
 import type { BlockProps } from "@/types";
 
-import { Menu } from "./Menu";
-
 const Features = lazy(() => import("./Features"));
+const Clouds = lazy(() => import("./Clouds"));
 
 export const Block = ({ type, data }: BlockProps) => {
-  return <>{type === "features" ? <Features {...{ type, data }} /> : <></>}</>;
+  return (
+    <>
+      {type === "features" ? (
+        <Features {...{ type, data }} />
+      ) : type === "clouds" ? (
+        <Clouds {...{ type, data }} />
+      ) : (
+        <></>
+      )}
+    </>
+  );
 };
 
 export const Blocks = ({ blocks }: { blocks?: BlockProps[] }) => {
@@ -19,7 +29,7 @@ export const Blocks = ({ blocks }: { blocks?: BlockProps[] }) => {
         </div>
       </div>
       <div className="max-w-screen-lg mx-auto sm:px-5 md:px-8 pt-10 pb-20 flex flex-col gap-5 border-b">
-        {blocks?.map((blockdata) => <Block {...blockdata} />)}
+        {blocks?.map((blockdata, index) => <Block key={`block-item-${index}`} {...blockdata} />)}
       </div>
     </div>
   );
