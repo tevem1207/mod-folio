@@ -5,18 +5,39 @@ import { Blocks } from "@/components";
 import type { Portfolio } from "@/types";
 
 export const Component = () => {
-  const [portfolioData, setPortfolioData] = useState<Portfolio>();
+  const [portfolioData, setPortfolioData] = useState<Portfolio | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/mod-folio/data.json")
-      .then((res) => res.json())
-      .then((portfolioData: Portfolio) => setPortfolioData(portfolioData));
+    const fetchPortfolioData = async () => {
+      try {
+        const response = await fetch("/mod-folio/data.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data: Portfolio = await response.json();
+        setPortfolioData(data);
+      } catch (err) {
+        setError((err as Error)?.message ?? "unknown error");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchPortfolioData();
   }, []);
 
   return (
     <article>
       <Header {...portfolioData} />
-      <Blocks {...portfolioData} />
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : error ? (
+        <div>Error: {error}</div>
+      ) : (
+        <Blocks {...portfolioData} />
+      )}
       <Footer {...portfolioData} />
     </article>
   );
