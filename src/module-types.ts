@@ -1,11 +1,13 @@
+import { Text } from "./types";
+
 export type FeaturesProps = {
   type: "features";
-  title: "string";
-  data: { title: string; content: string }[];
+  title: Text;
+  data: { title: Text; content: Text }[];
 };
 
 export type CloudsProps = {
   type: "clouds";
-  title: "string";
-  data: { title?: string; content?: string; img: string; bgColor?: string }[];
+  title: Text;
+  data: { title?: Text; content?: Text; img: string; bgColor?: string }[];
 };
